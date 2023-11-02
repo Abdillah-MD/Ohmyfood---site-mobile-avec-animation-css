@@ -67,10 +67,6 @@ h1, h2, h3, p {
   margin: 0 0 5px 0;
 }
 
-h2 {
-  font-family: "Roboto", sans-serif;
-}
-
 .main .restaurant img {
   width: 100%;
   display: block;
@@ -122,13 +118,14 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   padding: 8px 0 8px 10px;
-  width: 80%;
+  width: 100%;
   white-space: nowrap;
   overflow: overlay;
   text-overflow: clip;
   white-space: nowrap;
 }
 .main .restaurant__content-menu--assiette label h2 {
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   width: 60%;
 }
@@ -143,6 +140,22 @@ h2 {
   white-space: nowrap;
   width: 80%;
 }
+.main .restaurant__content-menu--assiette .checkbox-faBtn {
+  background-color: #99E2D0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  max-width: 70px;
+  margin-left: 5px;
+}
+.main .restaurant__content-menu--assiette .checkbox-faBtn .fa-check {
+  background-color: white;
+  border-radius: 25px;
+  padding: 3px;
+  color: #99E2D0;
+}
 .main .restaurant__content-menu input[type=submit] {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
@@ -152,4 +165,8 @@ h2 {
   border: none;
   padding: 15px 10%;
   margin: 40px auto;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=restaurants.css.map */
