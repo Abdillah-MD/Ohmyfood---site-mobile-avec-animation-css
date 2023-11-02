@@ -1,4 +1,4 @@
-/* Variable des couleurs principales  */
+/* Variable des couleurs principales & les font family  */
 $main-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
@@ -6,21 +6,32 @@ $green-font : #008766;
 $grey-1: #F6F6F6;
 $grey-2: #EAEAEA;
 $bcg-footer: #353535;
+$font-title: 'Shrikhand', serif;
+$font-txt: 'Roboto', sans-serif;
 
 /* Apparence des boutons & des cards */
 @mixin Btn-primaire {
-    background: linear-gradient($secondary-color, $main-color);
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    color: white;
-    padding: 13px 18px;
+  background: linear-gradient($secondary-color, $main-color);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  padding: 13px 18px;
+  border: none;
 }
 
 @mixin box-apparence {
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    overflow: hidden;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+}
+
+@mixin checkbox-apparence {
+  @include box-apparence();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0;
 }
 
 .header, .main, .footer {
@@ -31,7 +42,7 @@ $bcg-footer: #353535;
 :root, body {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: $font-txt;
   }
   
   a {
@@ -40,7 +51,7 @@ $bcg-footer: #353535;
   }
   
   h1, h2 {
-    font-family: "Shrikhand", serif;
+    font-family: $font-title;
   }
   
   h1, h2, h3, p {

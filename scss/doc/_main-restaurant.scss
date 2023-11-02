@@ -1,4 +1,83 @@
-.restaurant img {
-    width: 100%;
-    display: block;
+
+h2 {
+    font-family: $font-txt;
+}
+
+.main {
+    .restaurant {
+        // Image du restaurant
+        img {
+            width: 100%;
+            display: block;
+            position: relative;
+            object-fit: cover;
+            height: 200px;
+            z-index: -1;
+        }
+        // Compisition du menu du restaurant
+        &__content {
+            padding: 20px;
+            border-radius: 35px 35px 0 0;
+            margin-top: -40px;
+            background-color: $grey-1;
+            z-index: 10;
+            &-title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            // Customiser le formulaire du menu 
+            &-menu {
+                display: flex;
+                flex-direction: column;
+                // Composition du menu : Entrée, Plats, Dessert
+                legend {
+                    margin: 40px 0 0 0;
+                }
+                .underline {
+                    text-decoration: underline;
+                    width: 10%;
+                    font-size: 30px;
+                    font-weight: 900;
+                    color: $tertiary-color;
+                    margin: -25px 0 10px 0
+                }
+                &--assiette {
+                    @include checkbox-apparence;
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 8px 0 8px 10px;
+                        width: 80%;
+                        white-space: nowrap;
+                        overflow: overlay;
+                        text-overflow: clip;
+                        white-space: nowrap;
+                        h2 {
+                            font-size: 18px;
+                            width: 60%;
+                        }
+                        .choix-txt {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            &--description {
+                                overflow: hidden;
+                                text-overflow: fade(50%);
+                                white-space: nowrap;
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+                // Bouton Submit : Commander 
+                input[type="submit"] {
+                    @include Btn-primaire();
+                    padding: 15px 10%;
+                    margin: 40px auto;
+                }
+            }
+        }
+    }
 }
