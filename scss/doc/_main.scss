@@ -1,0 +1,126 @@
+/**** SCSS pour mobile fisrt ****/
+/*** Section n°1 : Accueil (Réserver un menu...) ****/
+.section1 {
+    background-color: $grey-1;
+    padding: 40px 30px;
+    text-align: center;
+    &__title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    &__txt {
+        margin-bottom: 40px;
+        font-weight: 200;
+    }
+    &__Btn {
+        @include Btn-primaire();
+        margin-top: 50px;
+    }
+}
+
+/*** Section n°2 : Les fonctionnalités ****/
+.section2 {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__title {
+        @media (min-width: 768px) {
+            position: absolute;
+        }
+    }
+    &__article {
+        @include box-apparence();
+        background-color: $grey-1;
+        margin: 10px 20px;
+        padding: 20px 5px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        overflow: visible;
+        @media (min-width: 768px) {
+            width: 31%;
+            margin: 50px 0 0 0;
+        }
+        .fa-store {
+            color: $main-color;
+        }
+        h3 {
+            width: 70%;
+            font-size: 16px;
+            margin: 0;
+        }
+        .section2__txt {
+            position: absolute;
+            left: -5px;
+            top: 35%;
+            background-color: $main-color;
+            color: white;
+            padding: 0 5px;
+            border-radius: 25px;
+        }
+    }
+}
+
+/*** Section n°3 : Les restaurants  *******/
+.section3 {
+    background-color: $grey-1;
+    padding: 20px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &--card {
+            width: 100%;
+            @include box-apparence();
+            position: relative;
+            margin-bottom: 30px;
+            @media (min-width: 768px) {
+                width: 48%;
+            }
+            img {
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+                display: block;
+                @media (min-width: 768px) {
+                    height: 230px;
+                }
+            }
+            &-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 20px 10px 20px;
+                .card-content__txt p {
+                        font-weight: 200;
+                }
+                .fa-heart {
+                    margin-top: 15px;
+                }
+            }
+            &-nvx {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background-color: $tertiary-color;
+                color: $green-font;
+                padding: 6px 9px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+

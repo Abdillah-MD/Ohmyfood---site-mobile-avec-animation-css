@@ -1,0 +1,21 @@
+/*** Footer : Mobile first ***/
+.footer {
+    background-color: $bcg-footer;
+    color: white;
+    padding: 20px;
+    img {
+        width: 45%;
+    }
+    &__box {
+        margin: 10px 0;
+        &--txt {
+            font-size: 14px;
+        }
+        &--link {
+            color: white;
+            font-size: 14px;
+            display: block;
+            margin: 0 0 5px 0;
+        }
+    }
+}

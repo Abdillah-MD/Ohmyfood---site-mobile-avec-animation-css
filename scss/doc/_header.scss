@@ -1,0 +1,23 @@
+/*** Header de la page d'Accueil : logo et flèche de retour ***/
+
+.header {
+    position: relative;
+    overflow: hidden;
+    img {
+        display: block;
+        margin: 15px auto;
+    }
+    &__previous {
+        position: absolute;
+        top: 30%;
+        left: 5px;
+        display: none;
+    }
+    &__lieu {
+        background-color: $grey-2;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0;
+    }
+}
