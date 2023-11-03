@@ -46,11 +46,13 @@
                         flex-direction: column;
                         justify-content: space-between;
                         padding: 8px 0 8px 10px;
-                        width: 100%;
                         white-space: nowrap;
                         overflow: overlay;
                         text-overflow: clip;
                         white-space: nowrap;
+                        width: 99%;
+                        transform-origin: left;
+                        transition: all 0.5s ease-in-out;
                         h2 {
                             font-family: $font-txt;
                             font-size: 18px;
@@ -74,11 +76,14 @@
                         flex-direction: row;
                         justify-content: center;
                         align-items: center;
-                        width: 20%;
                         max-width: 70px;
                         margin-left: 5px;
+                        margin-right: -3px;
+                        width: 1%;
+                        transition: all 0.5 ease-in-out;
+                        transform: translateX(100px);
                         input[type="checkbox"] {
-                            //appearance: none;
+                            appearance: none;
                         }
                         .fa-check {
                             background-color: white;

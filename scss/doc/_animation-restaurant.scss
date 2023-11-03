@@ -1,0 +1,15 @@
+.restaurant__content-menu {
+    // Au hover le bouton checked s'affiche 
+    &--assiette:hover {
+        label {
+            width: 80%;
+        }
+        .checkbox-faBtn {
+            transform: translateX(0);
+            width: 20%;
+        }
+        .checkbox-faBtn input:checked + .checked--icon, .checkbox-faBtn:hover {
+            transform: translateX(0);
+        }
+    }
+}
