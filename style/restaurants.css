@@ -81,7 +81,6 @@ h1, h2, h3, p {
   border-radius: 35px 35px 0 0;
   margin-top: -40px;
   background-color: #F6F6F6;
-  z-index: 10;
 }
 .main .restaurant__content-title {
   display: flex;
@@ -122,9 +121,9 @@ h1, h2, h3, p {
   overflow: overlay;
   text-overflow: clip;
   white-space: nowrap;
-  width: 99%;
-  transform-origin: left;
-  transition: all 0.5s ease-in-out;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
 }
 .main .restaurant__content-menu--assiette label h2 {
   font-family: "Roboto", sans-serif;
@@ -142,6 +141,12 @@ h1, h2, h3, p {
   white-space: nowrap;
   width: 80%;
 }
+.main .restaurant__content-menu--assiette input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+}
 .main .restaurant__content-menu--assiette .checkbox-faBtn {
   background-color: #99E2D0;
   display: flex;
@@ -151,14 +156,7 @@ h1, h2, h3, p {
   max-width: 70px;
   margin-left: 5px;
   margin-right: -3px;
-  width: 1%;
   transition: all 0.5 ease-in-out;
-  transform: translateX(100px);
-}
-.main .restaurant__content-menu--assiette .checkbox-faBtn input[type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 .main .restaurant__content-menu--assiette .checkbox-faBtn .fa-check {
   background-color: white;
@@ -177,13 +175,34 @@ h1, h2, h3, p {
   margin: 40px auto;
 }
 
-.restaurant__content-menu--assiette:hover label {
-  width: 80%;
+@keyframes box-checked {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-.restaurant__content-menu--assiette:hover .checkbox-faBtn {
+.restaurant__content-menu {
+  /*&--assiette:active {
+      input[type="checkbox"] + .checkbox-faBtn {
+          transition: all 0.3s ease-in;
+          transform: translateX(0);
+          width: 20%;
+      }
+      input[type="checkbox"] + .checkbox-faBtn + label {
+          width: 80%;
+      }
+  }*/
+}
+.restaurant__content-menu--assiette input[type=checkbox] + .checkbox-faBtn {
+  transition: all 0.3s ease-in;
+  transform: translateX(100px);
+}
+.restaurant__content-menu--assiette input[type=checkbox]:checked + .checkbox-faBtn {
   transform: translateX(0);
   width: 20%;
 }
-.restaurant__content-menu--assiette:hover .checkbox-faBtn input:checked + .checked--icon, .restaurant__content-menu--assiette:hover .checkbox-faBtn:hover {
-  transform: translateX(0);
+.restaurant__content-menu--assiette input[type=checkbox]:checked + .checkbox-faBtn + label {
+  width: 80%;
 }/*# sourceMappingURL=restaurants.css.map */

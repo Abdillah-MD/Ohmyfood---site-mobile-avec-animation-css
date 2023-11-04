@@ -1,15 +1,38 @@
+@keyframes box-checked {
+    from {
+        transform: translateX(100px);
+    } 
+    to {
+        transform: translateX(0);
+    }
+}
+
 .restaurant__content-menu {
-    // Au hover le bouton checked s'affiche 
-    &--assiette:hover {
-        label {
-            width: 80%;
+    // Le bouton checked s'affiche au click
+    &--assiette {
+        // À l'état d'origine le checkbox ne s'affiche pas "translateX(100px)" 
+        input[type="checkbox"] + .checkbox-faBtn {
+            transition: all 0.3s ease-in;
+            transform: translateX(100px);
         }
-        .checkbox-faBtn {
+        // Quand il est coché il s'affiche "translateX(0)" et prend un width de 20%
+        input[type="checkbox"]:checked + .checkbox-faBtn {
             transform: translateX(0);
             width: 20%;
         }
-        .checkbox-faBtn input:checked + .checked--icon, .checkbox-faBtn:hover {
-            transform: translateX(0);
+        // Quand il coché le label prend un width de 80% 
+        input[type="checkbox"]:checked + .checkbox-faBtn + label {
+            width: 80%;
         }
     }
+    /*&--assiette:active {
+        input[type="checkbox"] + .checkbox-faBtn {
+            transition: all 0.3s ease-in;
+            transform: translateX(0);
+            width: 20%;
+        }
+        input[type="checkbox"] + .checkbox-faBtn + label {
+            width: 80%;
+        }
+    }*/
 }

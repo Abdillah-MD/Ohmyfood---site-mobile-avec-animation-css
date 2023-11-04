@@ -17,7 +17,6 @@
             border-radius: 35px 35px 0 0;
             margin-top: -40px;
             background-color: $grey-1;
-            z-index: 10;
             &-title {
                 display: flex;
                 flex-direction: row;
@@ -50,9 +49,9 @@
                         overflow: overlay;
                         text-overflow: clip;
                         white-space: nowrap;
-                        width: 99%;
-                        transform-origin: left;
-                        transition: all 0.5s ease-in-out;
+                        width: 100%;
+                        transition: transform 0.3s ease-in-out;
+                        transform: translateX(0);
                         h2 {
                             font-family: $font-txt;
                             font-size: 18px;
@@ -70,6 +69,10 @@
                             }
                         }
                     }
+                    input[type="checkbox"] {
+                        appearance: none;
+                        display: none;
+                    }
                     .checkbox-faBtn {
                         background-color: $tertiary-color;
                         display: flex;
@@ -79,12 +82,7 @@
                         max-width: 70px;
                         margin-left: 5px;
                         margin-right: -3px;
-                        width: 1%;
                         transition: all 0.5 ease-in-out;
-                        transform: translateX(100px);
-                        input[type="checkbox"] {
-                            appearance: none;
-                        }
                         .fa-check {
                             background-color: white;
                             border-radius: 25px;
