@@ -183,18 +183,6 @@ h1, h2, h3, p {
     transform: translateX(0);
   }
 }
-.restaurant__content-menu {
-  /*&--assiette:active {
-      input[type="checkbox"] + .checkbox-faBtn {
-          transition: all 0.3s ease-in;
-          transform: translateX(0);
-          width: 20%;
-      }
-      input[type="checkbox"] + .checkbox-faBtn + label {
-          width: 80%;
-      }
-  }*/
-}
 .restaurant__content-menu--assiette input[type=checkbox] + .checkbox-faBtn {
   transition: all 0.3s ease-in;
   transform: translateX(100px);
@@ -205,4 +193,14 @@ h1, h2, h3, p {
 }
 .restaurant__content-menu--assiette input[type=checkbox]:checked + .checkbox-faBtn + label {
   width: 80%;
+}
+@media (min-width: 1024px) {
+  .restaurant__content-menu--assiette:hover input[type=checkbox] + .checkbox-faBtn {
+    transition: all 0.3s ease-in;
+    transform: translateX(0);
+    width: 20%;
+  }
+  .restaurant__content-menu--assiette:hover input[type=checkbox] + label {
+    width: 80%;
+  }
 }/*# sourceMappingURL=restaurants.css.map */
