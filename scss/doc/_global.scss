@@ -9,6 +9,13 @@ $bcg-footer: #353535;
 $font-title: 'Shrikhand', serif;
 $font-txt: 'Roboto', sans-serif;
 
+// 
+@mixin like-aprence {
+  color: transparent;
+  background: linear-gradient(110deg, $secondary-color, $main-color);
+  background-clip: text;
+}
+
 /* Apparence des boutons & des cards */
 @mixin Btn-primaire {
   background: linear-gradient($secondary-color, $main-color);
@@ -19,6 +26,7 @@ $font-txt: 'Roboto', sans-serif;
   border: none;
 }
 
+// Apparence des Box en général
 @mixin box-apparence {
   border-radius: 15px;
   background: white;
@@ -26,18 +34,20 @@ $font-txt: 'Roboto', sans-serif;
   overflow: hidden;
 }
 
+// Customisation de la div qui contient un input checkbox 
 @mixin checkbox-apparence {
   @include box-apparence();
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 10px 0;
+  width: 100%;
 }
 
-.header, .main, .footer {
+/*.header, .main, .footer {
     max-width: 1440px;
     margin: 0 auto;
-}
+}*/
 
 :root, body {
     margin: 0;

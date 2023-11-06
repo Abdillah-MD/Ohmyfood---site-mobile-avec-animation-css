@@ -107,9 +107,16 @@
                 .card-content__txt p {
                         font-weight: 200;
                 }
+                .fa-solid {
+                    @include like-aprence;
+                }
                 .fa-heart {
                     margin-top: 15px;
                 }
+                .fa-regular:hover {
+                    @include like-aprence;
+                }
+                
             }
             &-nvx {
                 position: absolute;

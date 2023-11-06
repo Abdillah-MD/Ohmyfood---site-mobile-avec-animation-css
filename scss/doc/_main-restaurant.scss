@@ -15,8 +15,9 @@
         &__content {
             padding: 20px;
             border-radius: 35px 35px 0 0;
-            margin-top: -40px;
+            margin: -40px auto 0 auto;
             background-color: $grey-1;
+            max-width: 1024px;
             &-title {
                 display: flex;
                 flex-direction: row;
@@ -26,20 +27,28 @@
             &-menu {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                @media (min-width: 768px) {
+                    align-items: center;
+                }
+                // Intitulé Entrée - Plat - Dessert
+                &--title {
+                    legend {
+                        margin: 40px 0 0 0;
+                    }
+                    .underline {
+                        text-decoration: underline;
+                        width: 10%;
+                        font-size: 30px;
+                        font-weight: 900;
+                        color: $tertiary-color;
+                        margin: -25px 0 10px 0;
+                    }
+                }
                 // Composition du menu : Entrée, Plats, Dessert
-                legend {
-                    margin: 40px 0 0 0;
-                }
-                .underline {
-                    text-decoration: underline;
-                    width: 10%;
-                    font-size: 30px;
-                    font-weight: 900;
-                    color: $tertiary-color;
-                    margin: -25px 0 10px 0;
-                }
                 &--assiette {
                     @include checkbox-apparence;
+                    max-width: 768px;
                     label {
                         display: flex;
                         flex-direction: column;

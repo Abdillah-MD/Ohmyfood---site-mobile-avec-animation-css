@@ -1,11 +1,10 @@
 @charset "UTF-8";
 /* Variable des couleurs principales & les font family  */
 /* Apparence des boutons & des cards */
-.header, .main, .footer {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
+/*.header, .main, .footer {
+    max-width: 1440px;
+    margin: 0 auto;
+}*/
 :root, body {
   margin: 0;
   padding: 0;
@@ -206,8 +205,20 @@ h1, h2, h3, p {
 .section3__container--card-content .card-content__txt p {
   font-weight: 200;
 }
+.section3__container--card-content .fa-solid {
+  color: transparent;
+  background: linear-gradient(110deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
 .section3__container--card-content .fa-heart {
   margin-top: 15px;
+}
+.section3__container--card-content .fa-regular:hover {
+  color: transparent;
+  background: linear-gradient(110deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .section3__container--card-nvx {
   position: absolute;

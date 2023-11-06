@@ -14,7 +14,7 @@
 <body>
     <div class="main-container">
         <header class="header">
-            <img src="/images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
             <a class="header__previous" href="index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
             <p class="header__lieu"><i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
         </header>
@@ -27,8 +27,10 @@
                         <i class="fa-regular fa-heart"></i>
                     </div>
                     <form class="restaurant__content-menu" action="" method="get">
-                        <legend>ENTRÉES</legend>
-                        <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <div class="restaurant__content-menu--title">
+                            <legend>ENTRÉES</legend>
+                            <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </div>
                         <div class="restaurant__content-menu--assiette">
                             <label for="entree_1">
                                 <h2>Tartare de poulpe acidulé</h2>
@@ -68,8 +70,10 @@
                                 <span class="checked--icon"><i class="fa-solid fa-check"></i></span>
                             </div>
                         </div>
-                        <legend>PLATS</legend>
-                        <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <div class="restaurant__content-menu--title">
+                            <legend>PLATS</legend>
+                            <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </div>
                         <div class="restaurant__content-menu--assiette">
                             <label for="plat_1">
                                 <h2>Coquilles Saint-Jacques</h2>
@@ -109,8 +113,10 @@
                                 <span class="checked--icon"><i class="fa-solid fa-check"></i></span>
                             </div>
                         </div>
-                        <legend>DESSERTS</legend>
-                        <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <div class="restaurant__content-menu--title">
+                            <legend>DESSERTS</legend>
+                            <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </div>
                         <div class="restaurant__content-menu--assiette">
                             <label for="dessert_1">
                                 <h2>Pétales de violettes glacés</h2>
@@ -156,7 +162,7 @@
             </section>
         </main>
         <footer class="footer">
-            <img src="/images/logo/ohmyfood@white.svg" alt="Ohmyfood">
+            <img src="./images/logo/ohmyfood@white.svg" alt="Ohmyfood">
             <div class="footer__box">
                 <p class="footer__box--txt"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
                 <p class="footer__box--txt"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
