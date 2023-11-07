@@ -3,19 +3,50 @@
     background-color: $bcg-footer;
     color: white;
     padding: 20px;
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
     img {
-        width: 45%;
+        height: 30px;
+        @media (min-width: 768px) {
+            width: auto;
+            height: 20px;
+            @media (min-width: 1024px) {
+                height: 30px;
+            }
+        }
     }
     &__box {
-        margin: 10px 0;
-        &--txt {
-            font-size: 14px;
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
         }
-        &--link {
-            color: white;
-            font-size: 14px;
-            display: block;
-            margin: 0 0 5px 0;
+        &--contain {
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+            margin: 10px 0;
+            &-txt {
+                font-size: 14px;
+                margin: 0 15px 5px 0;
+                @media (min-width: 1024px) {
+                    font-size: 18px;
+                }
+            }
+            &-link {
+                color: white;
+                font-size: 14px;
+                display: block;
+                margin: 0 15px 5px 0;
+                @media (min-width: 1024px) {
+                    font-size: 18px;
+                }
+            }
         }
     }
 }

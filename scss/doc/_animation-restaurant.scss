@@ -6,35 +6,53 @@
         transform: translateX(0);
     }
 }
-
-.restaurant__content-menu {
-    // Le bouton checked s'affiche au click
-    &--assiette {
-        // À l'état d'origine le checkbox ne s'affiche pas "translateX(100px)" 
-        input[type="checkbox"] + .checkbox-faBtn {
-            transition: all 0.3s ease-in;
-            transform: translateX(100px);
-        }
-        // Quand il est coché il s'affiche "translateX(0)" et prend un width de 20%
-        input[type="checkbox"]:checked + .checkbox-faBtn {
-            transform: translateX(0);
-            width: 20%;
-        }
-        // Quand il coché le label prend un width de 80% 
-        input[type="checkbox"]:checked + .checkbox-faBtn + label {
-            width: 80%;
-        }
-    }
-    // Le hover pour afficher le .checkbox-faBtn s'active uniquement pour l'ordinateur 
-    @media (min-width: 1024px) {
-        &--assiette:hover {
-            input[type="checkbox"] + .checkbox-faBtn {
-                transition: all 0.3s ease-in;
-                transform: translateX(0);
-                width: 20%;
+.restaurant {
+    &__content {
+        // Permet de mettre un like au hover de la souris 
+        &-title {
+            .likeBtn:hover {
+                .heart-hidden {
+                    opacity: 1;
+                }
+                .fa-regular {
+                    opacity: 0;
+                }
             }
-            input[type="checkbox"] + label {
-                width: 80%;
+        }
+        &-menu {
+            // Le bouton checked s'affiche au click
+            &--assiette {
+                // À l'état d'origine le checkbox ne s'affiche pas "translateX(100px)" 
+                input[type="checkbox"] + .checkbox-faBtn {
+                    transition: all 0.3s ease-in;
+                    transform: translateX(100px);
+                }
+                // Quand il est coché il s'affiche "translateX(0)" et prend un width de 20%
+                input[type="checkbox"]:checked + .checkbox-faBtn {
+                    transform: translateX(0);
+                    width: 20%;
+                }
+                // Quand il coché le label prend un width de 80% 
+                input[type="checkbox"]:checked + .checkbox-faBtn + label {
+                    width: 80%;
+                }
+            }
+            // Le hover pour afficher le .checkbox-faBtn s'active uniquement pour l'ordinateur 
+            @media (min-width: 1024px) {
+                &--assiette:hover {
+                    input[type="checkbox"] + .checkbox-faBtn {
+                        transition: all 0.3s ease-in;
+                        transform: translateX(0);
+                        width: 20%;
+                    }
+                    input[type="checkbox"] + label {
+                        width: 80%;
+                    }
+                }
+            }
+            input[type="submit"]:hover {
+                opacity: 0.9;
+                cursor: pointer;
             }
         }
     }

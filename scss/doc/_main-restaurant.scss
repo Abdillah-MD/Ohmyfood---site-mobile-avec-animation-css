@@ -8,8 +8,14 @@
             display: block;
             position: relative;
             object-fit: cover;
-            height: 200px;
+            height: 250px;
             z-index: -1;
+            @media (min-width: 768px) {
+                height: 400px;
+            }
+            @media (min-width: 1024px) {
+                height: 500px;
+            }
         }
         // Compisition du menu du restaurant
         &__content {
@@ -22,6 +28,33 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                h1 {
+                    width: 95%;
+                }
+                .likeBtn {
+                    width: 5%;
+                    position: relative;
+                    .fa-solid {
+                        @include like-aprence;
+                        position: absolute;
+                    }
+                    .fa-heart {
+                        margin-top: 15px;
+                    }
+                    .fa-regular {
+                        position: absolute;
+                        transition: all 0.3s ease-in;
+                    }
+                    .heart-hidden {
+                        opacity: 0;
+                        transition: all 0.3s ease-in;
+                    }
+                }
+                @media (min-width: 768px) {
+                    max-width: 768px;
+                    margin: 30px auto;
+                    font-size: 26px;
+                }
             }
             // Customiser le formulaire du menu 
             &-menu {
@@ -33,6 +66,12 @@
                 }
                 // Intitulé Entrée - Plat - Dessert
                 &--title {
+                    @media (min-width: 768px) {
+                        width: 100%;
+                        margin: 0 0 0 10px;
+                        padding: 0 0 0 10px;
+                        max-width: 768px;
+                    }
                     legend {
                         margin: 40px 0 0 0;
                     }
@@ -43,6 +82,7 @@
                         font-weight: 900;
                         color: $tertiary-color;
                         margin: -25px 0 10px 0;
+                        display: block;
                     }
                 }
                 // Composition du menu : Entrée, Plats, Dessert

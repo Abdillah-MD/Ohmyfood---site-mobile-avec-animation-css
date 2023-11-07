@@ -24,7 +24,10 @@
                 <div class="restaurant__content">
                     <div class="restaurant__content-title">
                         <h1>Le délice des sens</h1>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="likeBtn">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid heart-hidden fa-heart"></i>
+                        </div>
                     </div>
                     <form class="restaurant__content-menu" action="" method="get">
                         <div class="restaurant__content-menu--title">
@@ -164,12 +167,14 @@
         <footer class="footer">
             <img src="./images/logo/ohmyfood@white.svg" alt="Ohmyfood">
             <div class="footer__box">
-                <p class="footer__box--txt"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
-                <p class="footer__box--txt"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
-            </div>
-            <div class="footer__box">
-                <a class="footer__box--link" href="#">Mentions légales</a>
-                <a class="footer__box--link" href="mailto:ambdi6@gmail.com">Contact</a>
+                <div class="footer__box--contain">
+                    <p class="footer__box--contain-txt"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
+                    <p class="footer__box--contain-txt"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
+                </div>
+                <div class="footer__box--contain">
+                    <a class="footer__box--contain-link" href="#">Mentions légales</a>
+                    <a class="footer__box--contain-link" href="mailto:ambdi6@gmail.com">Contact</a>
+                </div>
             </div>
         </footer>
     </div>

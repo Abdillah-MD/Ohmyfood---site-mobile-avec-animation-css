@@ -1,6 +1,6 @@
 /**** SCSS pour mobile fisrt ****/
 /*** Section n°1 : Accueil (Réserver un menu...) ****/
-.section1 {
+.Bienvenue {
     background-color: $grey-1;
     padding: 40px 30px;
     text-align: center;
@@ -19,7 +19,7 @@
 }
 
 /*** Section n°2 : Les fonctionnalités ****/
-.section2 {
+.Fonctionnement {
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@
             font-size: 16px;
             margin: 0;
         }
-        .section2__txt {
+        .Fonctionnement__txt {
             position: absolute;
             left: -5px;
             top: 35%;
@@ -67,7 +67,7 @@
 }
 
 /*** Section n°3 : Les restaurants  *******/
-.section3 {
+.Restaurant {
     background-color: $grey-1;
     padding: 20px;
     &__title {
@@ -106,15 +106,26 @@
                 padding: 15px 20px 10px 20px;
                 .card-content__txt p {
                         font-weight: 200;
+                        width: 95%;
                 }
-                .fa-solid {
-                    @include like-aprence;
-                }
-                .fa-heart {
-                    margin-top: 15px;
-                }
-                .fa-regular:hover {
-                    @include like-aprence;
+                .likeBtn {
+                    position: relative;
+                    width: 5%;
+                    .fa-solid {
+                        @include like-aprence;
+                        position: absolute;
+                    }
+                    .fa-heart {
+                        margin-top: 15px;
+                    }
+                    .fa-regular {
+                        position: absolute;
+                        transition: all 0.3s ease-in;
+                    }
+                    .heart-hidden {
+                        opacity: 0;
+                        transition: all 0.3s ease-in;
+                    }
                 }
                 
             }
@@ -131,3 +142,44 @@
     }
 }
 
+// Section n°4 : Dédier à l'animation prévu lors du chargement de la page 
+.Chargement {
+    height: 100%;
+    margin: 120px 0;
+    @media (min-width: 1024px) {
+        margin: 30px 0;
+    }
+    &__img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+        .Abdi {
+            width: 25%;
+        }
+        .avec {
+            width: 10%;
+        }
+        .logo {
+            //background: linear-gradient(50deg, $secondary-color, $main-color);
+            width: 55%;
+        }
+    }
+    &__box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 40px 0;
+        &--tiret {
+            width: 10px;
+            height: 80px;
+            background: linear-gradient(110deg, $secondary-color, $main-color);
+            margin-right: 10px;
+        }
+    }
+    &__txt {
+        text-align: center;
+    }
+}
