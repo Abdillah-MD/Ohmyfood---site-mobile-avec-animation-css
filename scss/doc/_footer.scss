@@ -35,8 +35,13 @@
                 font-size: 14px;
                 margin: 0 15px 5px 0;
                 @media (min-width: 1024px) {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
+            }
+            // change la couleur au hover 
+            &-txt:hover {
+                color: $secondary-color;
+                cursor: pointer;
             }
             &-link {
                 color: white;
@@ -44,9 +49,14 @@
                 display: block;
                 margin: 0 15px 5px 0;
                 @media (min-width: 1024px) {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
+            // Change la couleur au hoer 
+            &-link:hover {
+                color: $secondary-color;
+            }
+
         }
     }
 }

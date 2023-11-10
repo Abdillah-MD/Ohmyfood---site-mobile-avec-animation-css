@@ -1,69 +1,59 @@
-// Permet de faire apparâitre les éléments depuis la gauche 
-@keyframes apparitionGauche {
-    from {
-        transform: translateX(-400%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
+
 
 .header, .Bienvenue, .Fonctionnement, .Restaurant, .footer {
     animation: animation-accueil 300ms 4s backwards;
 }
 
-// Section n°1 : Section de bienvenue et Btn d'action 
+////////////////// Section n°1 : Section de bienvenue et Btn d'action //////////////
 
-.Bienvenue {
-    @for $i from 1 through 3 {
-        &--#{$i} {
-            animation: apparitionGauche 300ms * $i ;
-        }
-    }
-    &__Btn:hover {
-        opacity: 0.9;
-    }
+// Change la couleur du bouton d'accueil au hover
+.Bienvenue__Btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
 
-// Section n° 2 : Fonctionnement du site 
+///////////////// Section n° 2 : Fonctionnement du site ////////////////////:
 
 .Fonctionnement__article {
     @for $i from 1 through 3 {
         &--#{$i} {
-            animation: ploof 300ms * $i;
+            animation: ploof 300ms * $i 2s;
         }
+    }   
+}
+.Fonctionnement__article:hover {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    .fa-solid {
+        color: $main-color;
     }
 }
 
-// Section n° 3 : Section qui contient les 4 restaurants 
+
+
+/////////////////// Section n° 3 : Section qui contient les 4 restaurants ///////////////////
 
 // Animation du Bouton like au hover de la souris 
 .likeBtn:hover {
-    .heart-hidden {
-        opacity: 1;
+    .fa-solid {
+        transform: scale(1);
     }
     .fa-regular {
         opacity: 0;
     }
 }
 
-// Section n°4 : Section qui contient le chargement, mis en diplay:none quand animation terminée 
+///////////////// Section n°4 : Section qui contient le chargement, mis en diplay:none quand animation terminée /////////
 
 .Chargement {
     // Permet d'animer le block de chargement puis disparition de la page 
-    animation: block-chargement 4s forwards;
+    animation: block-chargement 0s 4s both ;
     // animation bâtement de coeur du logo 
     &__img {
+        
         .logo {
-            animation: heartbeat 300ms ease-out 1.3s backwards 1;
+            animation: heartbeat 300ms ease-out 1.3s forwards 1;
         }
-        .avec {
-            animation: ploof 400ms ease-in 1500ms both;
-        }
-        .Abdi {
-            animation: ploof 400ms ease-in 1900ms both;
-        }
-    }
+}
     // Animation du Chargement 
     &__box {
         &--tiret {
@@ -89,4 +79,8 @@
         }
     }
 
+}
+
+.Chargement__img--cuisine-flamme img {
+    animation: flamme 3s both infinite;
 }

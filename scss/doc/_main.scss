@@ -7,6 +7,7 @@
     &__title {
         font-size: 28px;
         margin-bottom: 25px;
+        font-family: $font-txt;
     }
     &__txt {
         margin-bottom: 40px;
@@ -41,17 +42,15 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: center;
         overflow: visible;
         @media (min-width: 768px) {
             width: 31%;
             margin: 50px 0 0 0;
         }
-        .fa-store {
-            color: $main-color;
-        }
         h3 {
             width: 70%;
-            font-size: 16px;
+            font-size: 14px;
             margin: 0;
         }
         .Fonctionnement__txt {
@@ -113,7 +112,7 @@
                     width: 5%;
                     .fa-solid {
                         @include like-aprence;
-                        position: absolute;
+                        position: absolute;    
                     }
                     .fa-heart {
                         margin-top: 15px;
@@ -123,8 +122,8 @@
                         transition: all 0.3s ease-in;
                     }
                     .heart-hidden {
-                        opacity: 0;
-                        transition: all 0.3s ease-in;
+                        transform: scale(0);
+                        transition: all 300ms ease-in;
                     }
                 }
                 
@@ -144,8 +143,8 @@
 
 // Section n°4 : Dédier à l'animation prévu lors du chargement de la page 
 .Chargement {
-    height: 100%;
-    margin: 120px 0;
+    height: 0;
+    margin: 50px 0;
     @media (min-width: 1024px) {
         margin: 30px 0;
     }
@@ -156,15 +155,33 @@
         align-items: center;
         margin: 0 auto;
         width: 80%;
-        .Abdi {
-            width: 25%;
-        }
-        .avec {
-            width: 10%;
-        }
         .logo {
             //background: linear-gradient(50deg, $secondary-color, $main-color);
             width: 55%;
+        }
+        &--cuisine {
+            width: 30%;
+            margin: 30px 0 30px 5%;
+            &-flamme {
+                position: relative;
+                padding-left: 15%;
+                @media screen and (min-width: 768px) {
+                    padding-left: 20%;
+                }
+                img {
+                    width: 10%;
+                }
+                .f3 {
+                    position: absolute;
+                    top: 20%;
+                    left: 35%;
+                    z-index: -1;
+                }
+            }
+            // Image de la poele 
+            .Poele {
+                width: 90%;
+            }
         }
     }
     &__box {
@@ -173,13 +190,26 @@
         justify-content: center;
         margin: 40px 0;
         &--tiret {
-            width: 10px;
-            height: 80px;
+            width: 5px;
+            height: 50px;
             background: linear-gradient(110deg, $secondary-color, $main-color);
             margin-right: 10px;
+            @media screen and (min-width: 1024px) {
+                width: 10px;
+                height: 80px;
+            }
         }
     }
     &__txt {
         text-align: center;
+    }
+}
+
+// Permet de centrer le contenu sur Desktop avec un max width de 1024px
+@media (min-width: 1024px) {
+    .Restaurant__container, .Restaurant__title, .Fonctionnement {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

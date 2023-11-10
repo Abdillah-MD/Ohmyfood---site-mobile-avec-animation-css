@@ -10,9 +10,10 @@
     &__content {
         // Permet de mettre un like au hover de la souris 
         &-title {
+            // Animation du Bouton like au hover de la souris 
             .likeBtn:hover {
-                .heart-hidden {
-                    opacity: 1;
+                .fa-solid {
+                    transform: scale(1);
                 }
                 .fa-regular {
                     opacity: 0;

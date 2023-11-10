@@ -46,8 +46,8 @@
                         transition: all 0.3s ease-in;
                     }
                     .heart-hidden {
-                        opacity: 0;
-                        transition: all 0.3s ease-in;
+                        transform: scale(0);
+                        transition: all 300ms ease-in;
                     }
                 }
                 @media (min-width: 768px) {
