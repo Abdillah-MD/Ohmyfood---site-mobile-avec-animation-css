@@ -94,25 +94,25 @@
                         flex-direction: column;
                         justify-content: space-between;
                         padding: 8px 10px;
-                        white-space: nowrap;
-                        overflow: overlay;
-                        text-overflow: clip;
-                        white-space: nowrap;
+                        overflow: hidden;
                         width: 100%;
                         transition: all 0.3s ease-in;
                         h2 {
                             font-family: $font-txt;
                             font-size: 18px;
                             width: 60%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         .choix-txt {
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
                             &--description {
-                                overflow: hidden;
-                                text-overflow: fade(50%);
                                 white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
                                 width: 80%;
                             }
                         }

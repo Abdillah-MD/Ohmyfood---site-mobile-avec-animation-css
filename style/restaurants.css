@@ -226,10 +226,7 @@ h1, h2, h3, p {
   flex-direction: column;
   justify-content: space-between;
   padding: 8px 10px;
-  white-space: nowrap;
-  overflow: overlay;
-  text-overflow: clip;
-  white-space: nowrap;
+  overflow: hidden;
   width: 100%;
   transition: all 0.3s ease-in;
 }
@@ -237,6 +234,9 @@ h1, h2, h3, p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main .restaurant__content-menu--assiette label .choix-txt {
   display: flex;
@@ -244,9 +244,9 @@ h1, h2, h3, p {
   justify-content: space-between;
 }
 .main .restaurant__content-menu--assiette label .choix-txt--description {
-  overflow: hidden;
-  text-overflow: fade(50%);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   width: 80%;
 }
 .main .restaurant__content-menu--assiette input[type=checkbox] {
