@@ -197,8 +197,11 @@ h1, h2, h3, p {
     max-width: 768px;
   }
 }
-.main .restaurant__content-menu--title legend {
+.main .restaurant__content-menu--title h2 {
   margin: 40px 0 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
 }
 .main .restaurant__content-menu--title .underline {
   text-decoration: underline;
@@ -230,9 +233,9 @@ h1, h2, h3, p {
   width: 100%;
   transition: all 0.3s ease-in;
 }
-.main .restaurant__content-menu--assiette label h2 {
-  font-family: "Roboto", sans-serif;
+.main .restaurant__content-menu--assiette label .label__title {
   font-size: 18px;
+  font-weight: 700;
   width: 60%;
   white-space: nowrap;
   overflow: hidden;

@@ -72,8 +72,11 @@
                         padding: 0 0 0 10px;
                         max-width: 768px;
                     }
-                    legend {
+                    h2 {
                         margin: 40px 0 0 0;
+                        font-family: $font-txt;
+                        font-weight: 300;
+                        font-size: 16px;
                     }
                     .underline {
                         text-decoration: underline;
@@ -97,9 +100,9 @@
                         overflow: hidden;
                         width: 100%;
                         transition: all 0.3s ease-in;
-                        h2 {
-                            font-family: $font-txt;
+                        .label__title {
                             font-size: 18px;
+                            font-weight: 700;
                             width: 60%;
                             white-space: nowrap;
                             overflow: hidden;
