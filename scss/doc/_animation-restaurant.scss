@@ -44,7 +44,7 @@
                     }
                 }
                 // Quand il coché le label prend un width de 80% 
-                input[type="checkbox"]:checked + .checkbox-faBtn + article {
+                input[type="checkbox"]:checked + .checkbox-faBtn + label {
                     width: 80%;
                     transition: all 0.3s ease-in;
                 }
@@ -59,7 +59,7 @@
                             visibility: visible;
                         }
                     }
-                    input[type="checkbox"] + article {
+                    input[type="checkbox"] + label {
                         width: 80%;
                         transition: all 0.3s ease-in;
                     }
