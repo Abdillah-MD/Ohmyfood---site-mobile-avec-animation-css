@@ -1,0 +1,14 @@
+Lien vers repository GitHub : 
+
+https://github.com/Abdillah-MD/Ohmyfood---site-mobile-avec-animation-css.git
+
+--------------------
+
+Lien vers la version en ligne du site internet : 
+
+https://abdillah-md.github.io/Ohmyfood---site-mobile-avec-animation-css/index.html
+
+---------------------
+
+Projet réalisé par Abdillah MADI
+mail : hello@dynect.fr
