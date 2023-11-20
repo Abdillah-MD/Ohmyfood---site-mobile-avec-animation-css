@@ -92,7 +92,7 @@
                 &--assiette {
                     @include checkbox-apparence;
                     max-width: 768px;
-                    label {
+                    article {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
