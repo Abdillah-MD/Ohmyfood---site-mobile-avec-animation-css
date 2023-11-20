@@ -89,7 +89,7 @@
                 &--assiette {
                     @include checkbox-apparence;
                     max-width: 768px;
-                    label {
+                    article {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -97,7 +97,7 @@
                         overflow: hidden;
                         width: 100%;
                         transition: all 0.3s ease-in;
-                        h2 {
+                        h3 {
                             font-family: $font-txt;
                             font-size: 18px;
                             width: 60%;
