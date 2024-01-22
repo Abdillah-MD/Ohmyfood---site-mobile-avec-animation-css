@@ -1,0 +1,549 @@
+@charset "UTF-8";
+/* Variable des couleurs principales & les font family  */
+/* Apparence des boutons & des cards */
+/*.header, .main, .footer {
+    max-width: 1440px;
+    margin: 0 auto;
+}*/
+:root, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2 {
+  font-family: "Shrikhand", serif;
+}
+
+h1, h2, h3, p {
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+/*** Header de la page d'Accueil : logo et flèche de retour ***/
+.header {
+  position: relative;
+  overflow: hidden;
+}
+.header img {
+  display: block;
+  margin: 15px auto;
+}
+.header__previous {
+  position: absolute;
+  top: 30%;
+  left: 5px;
+  display: none;
+}
+.header__lieu {
+  background-color: #EAEAEA;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0;
+}
+
+/*** Footer : Mobile first ***/
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+.footer img {
+  height: 30px;
+}
+@media (min-width: 768px) {
+  .footer img {
+    width: auto;
+    height: 20px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .footer img {
+    height: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.footer__box--contain {
+  margin: 10px 0;
+}
+@media (min-width: 768px) {
+  .footer__box--contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.footer__box--contain-txt {
+  font-size: 14px;
+  margin: 0 15px 5px 0;
+}
+@media (min-width: 1024px) {
+  .footer__box--contain-txt {
+    font-size: 16px;
+  }
+}
+.footer__box--contain-txt:hover {
+  color: #FF79DA;
+  cursor: pointer;
+}
+.footer__box--contain-link {
+  color: white;
+  font-size: 14px;
+  display: block;
+  margin: 0 15px 5px 0;
+}
+@media (min-width: 1024px) {
+  .footer__box--contain-link {
+    font-size: 16px;
+  }
+}
+.footer__box--contain-link:hover {
+  color: #FF79DA;
+}
+
+/**** SCSS pour mobile fisrt ****/
+/*** Section n°1 : Accueil (Réserver un menu...) ****/
+.Bienvenue {
+  background-color: #F6F6F6;
+  padding: 40px 30px;
+  text-align: center;
+}
+.Bienvenue__title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+}
+.Bienvenue__txt {
+  margin-bottom: 40px;
+  font-weight: 200;
+}
+.Bienvenue__Btn {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  padding: 13px 18px;
+  border: none;
+  margin-top: 50px;
+}
+
+/*** Section n°2 : Les fonctionnalités ****/
+.Fonctionnement {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .Fonctionnement {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .Fonctionnement__title {
+    position: absolute;
+  }
+}
+.Fonctionnement__article {
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #F6F6F6;
+  margin: 10px 20px;
+  padding: 20px 5px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .Fonctionnement__article {
+    width: 31%;
+    margin: 50px 0 0 0;
+  }
+}
+.Fonctionnement__article h3 {
+  width: 70%;
+  font-size: 14px;
+  margin: 0;
+}
+.Fonctionnement__article .Fonctionnement__txt {
+  position: absolute;
+  left: -5px;
+  top: 35%;
+  background-color: #9356DC;
+  color: white;
+  padding: 0 5px;
+  border-radius: 25px;
+}
+
+/*** Section n°3 : Les restaurants  *******/
+.Restaurant {
+  background-color: #F6F6F6;
+  padding: 20px;
+}
+.Restaurant__title {
+  margin-bottom: 20px;
+}
+.Restaurant__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .Restaurant__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.Restaurant__container--card {
+  width: 100%;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .Restaurant__container--card {
+    width: 48%;
+  }
+}
+.Restaurant__container--card img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+@media (min-width: 768px) {
+  .Restaurant__container--card img {
+    height: 230px;
+  }
+}
+.Restaurant__container--card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 20px 10px 20px;
+}
+.Restaurant__container--card-content .card-content__txt p {
+  font-weight: 200;
+  width: 95%;
+}
+.Restaurant__container--card-content .likeBtn {
+  position: relative;
+  width: 5%;
+}
+.Restaurant__container--card-content .likeBtn .fa-solid {
+  color: transparent;
+  background: linear-gradient(110deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  position: absolute;
+}
+.Restaurant__container--card-content .likeBtn .fa-heart {
+  margin-top: 15px;
+}
+.Restaurant__container--card-content .likeBtn .fa-regular {
+  position: absolute;
+  transition: all 0.3s ease-in;
+}
+.Restaurant__container--card-content .likeBtn .heart-hidden {
+  transform: scale(0);
+  transition: all 300ms ease-in;
+}
+.Restaurant__container--card-nvx {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 6px 9px;
+  border-radius: 4px;
+}
+
+.Chargement {
+  height: 0;
+  margin: 50px 0;
+}
+@media (min-width: 1024px) {
+  .Chargement {
+    margin: 30px 0;
+  }
+}
+.Chargement__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+.Chargement__img .logo {
+  width: 55%;
+}
+.Chargement__img--cuisine {
+  width: 30%;
+  margin: 30px 0 30px 5%;
+}
+.Chargement__img--cuisine-flamme {
+  position: relative;
+  padding-left: 15%;
+}
+@media screen and (min-width: 768px) {
+  .Chargement__img--cuisine-flamme {
+    padding-left: 20%;
+  }
+}
+.Chargement__img--cuisine-flamme img {
+  width: 10%;
+}
+.Chargement__img--cuisine-flamme .f3 {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  z-index: -1;
+}
+.Chargement__img--cuisine .Poele {
+  width: 90%;
+}
+.Chargement__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0;
+}
+.Chargement__box--tiret {
+  width: 5px;
+  height: 50px;
+  background: linear-gradient(110deg, #FF79DA, #9356DC);
+  margin-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .Chargement__box--tiret {
+    width: 10px;
+    height: 80px;
+  }
+}
+.Chargement__txt {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .Restaurant__container, .Restaurant__title, .Fonctionnement {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.header, .Bienvenue, .Fonctionnement, .Restaurant, .footer {
+  animation: animation-accueil 300ms 4s backwards;
+}
+
+.Bienvenue__Btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.Fonctionnement__article--1 {
+  animation: ploof 300ms 2s;
+}
+.Fonctionnement__article--2 {
+  animation: ploof 600ms 2s;
+}
+.Fonctionnement__article--3 {
+  animation: ploof 900ms 2s;
+}
+
+.Fonctionnement__article:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.Fonctionnement__article:hover .fa-solid {
+  color: #9356DC;
+}
+
+.likeBtn:hover .fa-solid {
+  transform: scale(1);
+}
+.likeBtn:hover .fa-regular {
+  opacity: 0;
+}
+
+.Chargement {
+  animation: block-chargement 0s 4s both;
+}
+.Chargement__img .logo {
+  animation: heartbeat 300ms ease-out 1.3s forwards 1;
+}
+.Chargement__box--tiret {
+  animation: chargement 1000ms backwards infinite alternate;
+}
+.Chargement__box--tiret--1 {
+  animation-delay: 250ms;
+}
+.Chargement__box--tiret--2 {
+  animation-delay: 500ms;
+}
+.Chargement__box--tiret--3 {
+  animation-delay: 750ms;
+}
+.Chargement__box--tiret--4 {
+  animation-delay: 1000ms;
+}
+.Chargement__txt-p--span {
+  animation: load 1000ms forwards infinite alternate;
+}
+.Chargement__txt-p--span--1 {
+  animation-delay: 333ms;
+}
+.Chargement__txt-p--span--2 {
+  animation-delay: 666ms;
+}
+.Chargement__txt-p--span--3 {
+  animation-delay: 999ms;
+}
+
+.Chargement__img--cuisine-flamme img {
+  animation: flamme 3s both infinite;
+}
+
+@keyframes animation-accueil {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes chargement {
+  from {
+    transform: scaleY(0.5);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes block-chargement {
+  from {
+    width: 100%;
+  }
+  to {
+    transform: scale(0);
+    display: none;
+    margin: 0;
+  }
+}
+@keyframes ploof {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes apparitionGauche {
+  0% {
+    -webkit-transform: scale(0) translateX(-2000px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(0.5, 1.3) translateX(100px);
+    opacity: 0.8;
+  }
+  75% {
+    -webkit-transform: scale(1) translateX(30px);
+    opacity: 0.9;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes flamme {
+  0% {
+    transform: translateX(10px) scale(0.8);
+  }
+  24% {
+    transform: scale(1.05) translateX(-3px) translateY(4px);
+    opacity: 0.8;
+  }
+  38% {
+    transform: scale(0.8) translateX(2px) translateY(6px);
+    opacity: 0.7;
+  }
+  56% {
+    transform: scale(0.5) translateX(-4px) translateY(9px);
+    opacity: 0.5;
+  }
+  72% {
+    transform: scale(0.4) translateX(3px) translateY(12px);
+    opacity: 0.4;
+  }
+  88% {
+    transform: scale(0.25) translateX(-2px) translateY(15px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.1) translateX(3px) translateY(18px);
+    opacity: 0.1;
+  }
+}
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */

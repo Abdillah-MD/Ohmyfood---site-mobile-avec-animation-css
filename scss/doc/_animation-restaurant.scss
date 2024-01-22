@@ -16,6 +16,7 @@
             &--title {
             // Permet d'animer l'intitulé des plats (entrées, plats, desserts)
             animation: tada 300ms ease-in forwards;
+            -webkit-animation: tada 300ms ease-in forwards;;
             @for $i from 1 through 3 {
                 &--#{$i} {
                     animation-delay: 3.3s + 300ms * $i;
@@ -25,6 +26,7 @@
             &--assiette {
                 // Permet d'animer la sélection - apparition de la gauche vers la droite 
                 animation: apparitionGauche 300ms ease-out both;
+                -webkit-animation: apparitionGauche 300ms ease-out both;;
                 @for $i from 1 through 10 {
                     &--#{$i} {
                         animation-delay: 300ms * $i;
